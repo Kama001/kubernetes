@@ -1,0 +1,13 @@
+kubectl create -f storageClass.yaml
+
+kubectl create -f test-local-pv.yaml
+kubectl get pv
+kubectl delete pv --all(to delete pv)
+
+kubectl apply -f test-pvc.yaml
+kubectl get pvc
+
+kubectl apply -f test-local-vol.yaml
+
+kubectl delete pod test-local-vol
+kubectl get pod
